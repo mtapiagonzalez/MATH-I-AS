@@ -392,6 +392,10 @@ transform: translateY(-5px);
 
 }
 
+.accordion-item {
+	background-color: #ffd0e71d;
+}
+
 
 .skillcardTable td {
 	padding: 0 8px;
