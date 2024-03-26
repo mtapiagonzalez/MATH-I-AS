@@ -484,6 +484,7 @@
 
     <!-- All Js -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         // Configurar el valor de anchura de las barras de progreso
@@ -508,12 +509,19 @@
           });
 
           if (response.ok){
-            alert('¡Gracias por dejar tu mensaje, que tengas un buen día!');
+            Swal.fire({
+              text: "¡Gracias por dejar tu mensaje, que tengas un buen día!",
+              icon: "success"
+            });
             document.getElementById('name').value = '';
             document.getElementById('email').value = '';
             document.getElementById('message').value = '';
           }else{
-            alert('Hubo un problema al enviar el mensaje. Inténtalo más tarde.');
+            alert('');
+            Swal.fire({
+              text: "Hubo un problema al enviar el mensaje. Inténtalo más tarde.",
+              icon: "error"
+            });
             
           }
         }
